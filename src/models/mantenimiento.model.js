@@ -1,7 +1,7 @@
 'user strict';
 var dbConn = require('../../config/db.config');
 
-//Creación de Objeto Guardia
+//Creación de Objeto 
 var Mantenimiento = function(mantenimiento){
     this.nombre     = mantenimiento.nombre;
 	this.apellidos  = mantenimiento.apellidos;

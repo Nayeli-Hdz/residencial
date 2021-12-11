@@ -16,7 +16,6 @@ var Residente = function (residente) {
     this.updated_at     = new Date();
 }
 
-//  Get all Car
 Residente.getAllResidente = (result) => {
    dbConn.query('SELECT * FROM residente', (err, res) =>{
        if(err) {
@@ -30,7 +29,6 @@ Residente.getAllResidente = (result) => {
    })
 }
 
-// GET CAR BY ID FORM DB
 
 Residente.getAllResidenteById = (id, result) => {
    dbConn.query('SELECT * FROM residente WHERE id=?',id, (err, res) =>{
@@ -43,7 +41,6 @@ Residente.getAllResidenteById = (id, result) => {
    })
 } 
 
-//CREATE NEW CAR 
 Residente.createResidente = (residenteData, result) => {
        dbConn.query('INSERT INTO residente SET ? ', residenteData,(err, res) => {
        if(err){

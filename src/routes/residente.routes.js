@@ -3,19 +3,19 @@ const router = express.Router();
 
 const residenteController = require('../controllers/residente.controller');
 
-//  Get all car
+// Obtiene todos los registros de los Residente
 router.get('/', residenteController.getResidenteList);
 
-// Get car by id
+// Genera un nuevo registro de Residente
 router.get('/:id', residenteController.getAllResidenteById);
 
-// Craete new car
+// Devuelve el detalle de un solo Residente
 router.post('/', residenteController.createNewResidente);
 
-// Update Car
+// Modifica un Residente a través del ID
 router.put('/:id', residenteController.update);
 
-// Delete Car
+// Elimina a un Residente a través del ID
 router.delete('/:id', residenteController.deleteResidente);
 
 
